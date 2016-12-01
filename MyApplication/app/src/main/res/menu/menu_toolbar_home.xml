@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/home"
+        android:title="homeIcon"
+        android:icon="@drawable/home"
+        android:onClick="homeClick"
+        app:showAsAction="always"
+        />
+
+
+    <item android:id="@+id/search"
+        android:title="searchIcon"
+        android:icon="@drawable/search"
+        android:onClick="searchClick"
+        app:showAsAction="always"
+        />
+
+
+    <item android:id="@+id/addBook"
+        app:showAsAction="never"
+        android:title="Add Book" />
+    <item android:id="@+id/deleteBook"
+        app:showAsAction="never"
+        android:title="Delete Book" />
+    <item android:id="@+id/settings"
+        app:showAsAction="never"
+        android:title="Settings" />
+
+
+
+</menu>
