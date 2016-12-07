@@ -19,19 +19,27 @@ public class Book {
         this.imageResource = imageResource;
     }
 
+    public Book(int name, int imageResource){
+        this.name = name;
+        this.imageResource = imageResource;
+    }
+
     public Book(){
 
     }
 
     public void setName(int name) {
+
         this.name = name;
     }
 
     public void setAuthor(int author) {
+
         this.author = author;
     }
 
     public void setImageResource(int imageResource) {
+
         this.imageResource = imageResource;
     }
 
