@@ -6,10 +6,12 @@ package com.mobileappclass.myapplication;
 
 public class Book {
 
-    private final int name;
-    private final int author;
-    private final int imageResource;
+    private  int name;
+    private  int author;
+    private  int imageResource;
     private boolean isFavorite = false;
+
+
 
     public Book(int name, int author, int imageResource) {
         this.name = name;
@@ -17,28 +19,48 @@ public class Book {
         this.imageResource = imageResource;
     }
 
+    public Book(){
+
+    }
+
+    public void setName(int name) {
+        this.name = name;
+    }
+
+    public void setAuthor(int author) {
+        this.author = author;
+    }
+
+    public void setImageResource(int imageResource) {
+        this.imageResource = imageResource;
+    }
+
+
     public int getName() {
+
         return name;
     }
 
     public int getAuthor() {
+
         return author;
     }
 
     public int getImageResource() {
+
         return imageResource;
     }
 
     public boolean getIsFavorite() {
+
         return isFavorite;
     }
     public void setIsFavorite(boolean isFavorite) {
+
         this.isFavorite = isFavorite;
     }
 
-    public void toggleFavorite() {
-        isFavorite = !isFavorite;
-    }
+
 
 
 

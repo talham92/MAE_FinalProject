@@ -15,15 +15,24 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class Activity_lib extends AppCompatActivity {
 
     private EditText newTaskText;
     private EditText newTaskDescription;
 
+    private ArrayList<Book> Books;
+   // private Book[] books;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lib);
+        Books = new ArrayList<>();
+
+        addBooks();
 
         // Sets up the toolbar
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar_lib);
@@ -31,8 +40,23 @@ public class Activity_lib extends AppCompatActivity {
 
 
         GridView gridView=(GridView) findViewById(R.id.gridview_LIB);
-        BooksAdapter booksAdapter=new BooksAdapter(this,books);
+        BooksAdapter1 booksAdapter=new BooksAdapter1(this,Books);
         gridView.setAdapter(booksAdapter);
+    }
+
+    // Hardcoded Books
+    private void addBooks() {
+        Books.add(new Book(R.string.abc_an_amazing_alphabet_book, R.string.dr_seuss, R.drawable.abc));
+        Books.add(new Book(R.string.are_you_my_mother, R.string.dr_seuss, R.drawable.areyoumymother));
+        Books.add(new Book(R.string.where_is_babys_belly_button, R.string.karen_katz, R.drawable.whereisbabysbellybutton));
+        Books.add(new Book(R.string.on_the_night_you_were_born, R.string.nancy_tillman, R.drawable.onthenightyouwereborn));
+        Books.add(new Book(R.string.hand_hand_fingers_thumb, R.string.dr_seuss, R.drawable.handhandfingersthumb));
+        Books.add(new Book(R.string.the_very_hungry_caterpillar, R.string.eric_carle, R.drawable.theveryhungrycaterpillar));
+        Books.add( new Book(R.string.the_going_to_bed_book, R.string.sandra_boynton, R.drawable.thegoingtobedbook));
+        Books.add(new Book(R.string.oh_baby_go_baby, R.string.dr_seuss, R.drawable.ohbabygobaby));
+        Books.add( new Book(R.string.the_tooth_book, R.string.dr_seuss, R.drawable.thetoothbook));
+        Books.add(new Book(R.string.one_fish_two_fish_red_fish_blue_fish, R.string.dr_seuss, R.drawable.onefish));
+
     }
 
     @Override
@@ -43,7 +67,11 @@ public class Activity_lib extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    private Book[] books =
+    //private Book[] books
+    // Hardcoded addition of Books
+
+/*
+     private Book[] books =
             {
                     new Book(R.string.abc_an_amazing_alphabet_book, R.string.dr_seuss, R.drawable.abc),
                     new Book(R.string.are_you_my_mother, R.string.dr_seuss, R.drawable.areyoumymother),
@@ -57,6 +85,7 @@ public class Activity_lib extends AppCompatActivity {
                     new Book(R.string.one_fish_two_fish_red_fish_blue_fish, R.string.dr_seuss, R.drawable.onefish)
 
             };
+            */
 
     // To Handle AppBar Dropdown button clicks
     @Override

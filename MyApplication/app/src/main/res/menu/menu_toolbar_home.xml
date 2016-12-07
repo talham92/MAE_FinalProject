@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <item android:id="@+id/home"
-        android:title="homeIcon"
-        android:icon="@drawable/home"
-        android:onClick="homeClick"
+    <item android:id="@+id/add"
+        android:title="addIcon"
+        android:icon="@drawable/add"
+        android:onClick="addClick"
         app:showAsAction="always"
         />
 
@@ -19,9 +19,7 @@
         />
 
 
-    <item android:id="@+id/addBook"
-        app:showAsAction="never"
-        android:title="Add Book" />
+
     <item android:id="@+id/deleteBook"
         app:showAsAction="never"
         android:title="Delete Book" />

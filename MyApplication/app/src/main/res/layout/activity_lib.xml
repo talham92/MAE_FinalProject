@@ -37,17 +37,14 @@
         android:id="@+id/gridview_LIB"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:columnWidth="100dp"
+        android:columnWidth="80dp"
         android:numColumns="auto_fit"
-        android:verticalSpacing="24dp"
-        android:horizontalSpacing="10dp"
-        android:stretchMode="spacingWidthUniform"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="8dp"
         android:layout_below="@+id/title_LIB"
-        android:layout_alignParentStart="true"
         android:paddingBottom="16dp"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
-        android:paddingTop="10dp"
         />
 </RelativeLayout>
+

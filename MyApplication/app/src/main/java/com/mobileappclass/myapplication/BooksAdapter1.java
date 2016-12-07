@@ -8,16 +8,20 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /**
  * Created by t_boy on 11/30/2016.
  */
 
-public class BooksAdapter extends BaseAdapter
+public class BooksAdapter1 extends BaseAdapter
 {
     private final Context mContext;
-    private final Book[] books;
+    private ArrayList<Book> books;
+    //private final Book[] books;
 //////////////////////////////////////////////////////////////////////////
-    public BooksAdapter(Context context, Book[] books)
+    public BooksAdapter1(Context context, ArrayList<Book> books)
     {
         this.mContext=context;
         this.books=books;
@@ -26,7 +30,7 @@ public class BooksAdapter extends BaseAdapter
     @Override
     public int getCount() {
 
-        return books.length;
+        return books.size();
     }
 
 
@@ -46,7 +50,7 @@ public class BooksAdapter extends BaseAdapter
     public View getView(int position, View convertView, ViewGroup parent)
     {
         ////////////////////////////////
-        final Book book=books[position];
+        final Book book = books.get(position);
         ////////////////////////////////
         if (convertView==null)
         {
