@@ -22,7 +22,7 @@ public class Activity_lib extends AppCompatActivity {
     private EditText newTaskText;
     private EditText newTaskDescription;
 
-    private ArrayList<Book> Books;
+    private ArrayList<Book> library_Books;
    // private Book[] books;
 
 
@@ -30,7 +30,7 @@ public class Activity_lib extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lib);
-        Books = new ArrayList<>();
+       library_Books = new ArrayList<>();
 
         addBooks();
 
@@ -40,27 +40,12 @@ public class Activity_lib extends AppCompatActivity {
 
 
         GridView gridView=(GridView) findViewById(R.id.gridview_LIB);
-        BooksAdapter1 booksAdapter=new BooksAdapter1(this,Books);
+        BooksAdapter1 booksAdapter=new BooksAdapter1(this,library_Books);
         gridView.setAdapter(booksAdapter);
     }
 
     // Hardcoded Books
 
-    private void addBooks() {
-        /*
-        Books.add(new Book(R.string.abc_an_amazing_alphabet_book, R.string.dr_seuss, R.drawable.abc));
-        Books.add(new Book(R.string.are_you_my_mother, R.string.dr_seuss, R.drawable.areyoumymother));
-        Books.add(new Book(R.string.where_is_babys_belly_button, R.string.karen_katz, R.drawable.whereisbabysbellybutton));
-        Books.add(new Book(R.string.on_the_night_you_were_born, R.string.nancy_tillman, R.drawable.onthenightyouwereborn));
-        Books.add(new Book(R.string.hand_hand_fingers_thumb, R.string.dr_seuss, R.drawable.handhandfingersthumb));
-        Books.add(new Book(R.string.the_very_hungry_caterpillar, R.string.eric_carle, R.drawable.theveryhungrycaterpillar));
-        Books.add(new Book(R.string.the_going_to_bed_book, R.string.sandra_boynton, R.drawable.thegoingtobedbook));
-        Books.add(new Book(R.string.oh_baby_go_baby, R.string.dr_seuss, R.drawable.ohbabygobaby));
-        Books.add( new Book(R.string.the_tooth_book, R.string.dr_seuss, R.drawable.thetoothbook));
-        Books.add(new Book(R.string.one_fish_two_fish_red_fish_blue_fish, R.string.dr_seuss, R.drawable.onefish));
-        */
-
-    }
 
 
     @Override
@@ -108,6 +93,32 @@ public class Activity_lib extends AppCompatActivity {
 
 
     }
+
+    private void addBooks() {
+
+        library_Books.add(new Book(R.string.abc_an_amazing_alphabet_book, R.string.dr_seuss, R.drawable.image9780393254594));
+        library_Books.add(new Book(R.string.are_you_my_mother, R.string.dr_seuss, R.drawable.image9780307474278));
+        library_Books.add(new Book(R.string.where_is_babys_belly_button, R.string.karen_katz, R.drawable.image9781338099133));
+        library_Books.add(new Book(R.string.on_the_night_you_were_born, R.string.nancy_tillman, R.drawable.image9781338109061));
+        library_Books.add(new Book(R.string.hand_hand_fingers_thumb, R.string.dr_seuss, R.drawable.image9781594633669));
+        library_Books.add(new Book(R.string.a_man_called_ove,R.drawable.image9781476738024));
+
+
+        /*
+        Books.add(new Book(R.string.abc_an_amazing_alphabet_book, R.string.dr_seuss, R.drawable.abc));
+        Books.add(new Book(R.string.are_you_my_mother, R.string.dr_seuss, R.drawable.areyoumymother));
+        Books.add(new Book(R.string.where_is_babys_belly_button, R.string.karen_katz, R.drawable.whereisbabysbellybutton));
+        Books.add(new Book(R.string.on_the_night_you_were_born, R.string.nancy_tillman, R.drawable.onthenightyouwereborn));
+        Books.add(new Book(R.string.hand_hand_fingers_thumb, R.string.dr_seuss, R.drawable.handhandfingersthumb));
+        Books.add(new Book(R.string.the_very_hungry_caterpillar, R.string.eric_carle, R.drawable.theveryhungrycaterpillar));
+        Books.add(new Book(R.string.the_going_to_bed_book, R.string.sandra_boynton, R.drawable.thegoingtobedbook));
+        Books.add(new Book(R.string.oh_baby_go_baby, R.string.dr_seuss, R.drawable.ohbabygobaby));
+        Books.add( new Book(R.string.the_tooth_book, R.string.dr_seuss, R.drawable.thetoothbook));
+        Books.add(new Book(R.string.one_fish_two_fish_red_fish_blue_fish, R.string.dr_seuss, R.drawable.onefish));
+        */
+
+    }
+
 
 
 
